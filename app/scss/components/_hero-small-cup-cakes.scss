@@ -1,0 +1,29 @@
+.hero-small-cup-cakes {
+    background-image: url('../images/small-cup-cakes-hero/cup-cakes-hero4-quality80.jpg');
+    background-color: color(rgba-brown);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: hue;
+    padding: 6rem 0;
+
+    &__wrapper {
+        @include flexAllCenter;
+        flex-direction: column;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+    }
+
+    &__h2 {
+        color: color(primary-dark);
+        padding-left: 20rem;
+        font-family: Great Vibes, cursive;
+        text-transform: capitalize;
+    }
+
+    &__decoration {
+        width: 14rem;
+        height: auto;
+        margin-left: 20rem;
+    }
+}

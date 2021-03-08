@@ -1,0 +1,466 @@
+@include media-small {
+    html {
+        font-size: 14px;    
+    }
+    // top info
+    .top-info {
+        display: none;
+    }
+
+    // menu transparent black background 
+    .bckg-wrapper {
+        background-color: transparent;
+        visibility: hidden;
+        transition: all 300ms ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .bckg-transition {
+        background-color: color(rgba-black08);
+        visibility: visible;
+    }
+
+    // navigation hamburger 
+    .header {
+
+        &__header-flex {
+            justify-content: space-between;
+            padding: 0.3rem 0.1rem;
+        }
+
+        &__nav {
+            width: 260px;
+            height: 100%;
+            overflow: hidden;
+            overflow-y: scroll;
+            transform: translateX(-100%);
+            transition: transform 300ms ease;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: color(primary-dark);
+            z-index: 222;
+            position: fixed;
+        }
+
+        .nav__visible {  
+            transform: translateX(0);
+        }
+
+        &__logoImg {
+            width: 9rem;
+            height: auto;
+            transition: all 300ms ease-in;
+        }
+
+        &__items {
+            display: block;
+        }
+
+        &__item {
+            border-bottom: 0.5px solid color(primary-grey);
+            padding: 1.4rem 0rem; 
+            width: 100%;
+        }
+
+        // triangle before class
+        &__item-triangle {
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 55px;
+                left: 25px;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid color(secondary-grey);
+                transition: all 300ms ease;
+            }
+        }
+
+        &__link {
+            color: color(primary-white);
+            padding-left: 1rem;
+            opacity: 0.8;
+            transition: padding 300ms ease,
+                        opacity 300ms ease;
+        }
+
+        &__link:hover {
+            color: color(primary-white);
+            padding-left: 1.3rem;
+            opacity: 1;
+        }
+
+        &__sub-menu-dropdown {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0;
+            padding: 0;
+            z-index: 500;
+            visibility: hidden;
+            overflow: hidden;
+            opacity: 1;
+            transform: translateY(+13%);
+            transition: all .25s ease;
+            box-shadow: none;     
+            background-color: color(secondary-grey); 
+        }
+
+        &__sub-menu-visible {
+            visibility: visible;
+            height: 160px;
+        }
+
+        &__item:hover &__sub-menu-dropdown {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(+13%);
+        }
+
+        &__item:hover &--arrow {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        &__sub-menu-item {
+            border-bottom: 0.5px solid color(primary-grey);
+            padding: 1.4rem 0rem; 
+            width: 100%;
+        }
+
+        &__sub-menu-link {
+            color: color(primary-white);
+            opacity: 0.8;
+            padding-left: 1rem;
+        }
+
+        &__sub-menu-link:hover {
+            color: color(primary-white);
+            opacity: 1;
+            padding-left: 1.3rem;
+        }
+
+        &__item-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        &--arrow {
+            cursor: pointer;
+            padding: 1.17rem 1.3rem;
+            color: color(primary-white);
+            font-size: 1.6rem;
+            background-color: transparent;
+            transition: background-color 30ms ease-in;
+            border-left: 1px solid color(primary-grey);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &__background-arrow {
+            background-color: color(primary-orange);
+        }
+
+        &__toggle {
+            display: block;
+            cursor: pointer;
+            background-color: transparent;
+            width: 4em;
+            height: 4em;
+            border: 0;
+            padding: 0;
+            transition: opacity 250ms ease;
+        }
+
+        &__hamburger,
+        &__hamburger::before,
+        &__hamburger::after {
+            display: block;
+            margin: 0 auto;
+            height: 3px;
+            background: color(primary-dark);
+        }
+
+        &__hamburger {
+            width: 50%;
+            position: relative;
+        }
+
+        &__hamburger::before,
+        &__hamburger::after {
+            content: '';
+            width: 100%;
+            transition: all 300ms ease;
+        }
+
+        &__hamburger::before {
+            transform: translateY(-6px);
+        }
+
+        &__hamburger::after {
+            transform: translateY(3px);
+        }
+
+        &__hamburger-cross {
+            transform: rotate(45deg);
+            transition: transform 300ms ease;
+            background: color(primary-white);
+            z-index: 10;
+
+            &::before {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+            }
+
+            &::after {
+                background: color(primary-white);
+                transform: rotate(-90deg);
+                transition: transform 300ms ease;
+            }
+        }
+    }
+
+    // swiper-slider main page medium screen
+    .hero {
+        height: 60vh;
+    }
+
+    .swiper-text-box-slatkisi {
+        padding-bottom: 0rem;
+    }
+    
+    .swiper-text-box-kolaci {
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    .swiper-h3-kolaci {
+        padding-left: 3rem;
+    }
+
+    .recommended {
+        padding: 0;
+
+        &__card-wrapper {
+            gap: 1rem;
+        }
+
+        &__h2 {
+            padding: 1.5rem 0;
+        }
+
+        &__card-img {
+            width: 95%;
+            max-width: 25rem;
+            height: 95%;
+            max-height: 25rem;
+            margin: 0 auto;
+        }
+    }
+
+    .map-sec {
+        background-color: color(primary-nav);
+        padding: 0.5rem 0 2rem 0;
+    
+        &__h2 {
+            text-align: center;
+            padding: 1rem 0;
+
+            &::after {
+                content: '';
+                display: block;
+                margin: 1rem auto;
+                border-radius: 0 1rem 1rem 0;
+                width: 20rem;
+                height: 3px;
+                background: rgb(0,0,0);
+                background: linear-gradient(266deg, rgba(0,0,0,1) 0%, rgba(154,14,46,1) 0%, rgba(239,241,241,1) 100%);  
+            }
+        }
+    }
+
+    #map {
+        height: 250px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        justify-content: center;
+        font-size: 1.1rem;
+        height: 28rem;
+
+        &__title {
+            font-size: 1.3rem;
+        }
+
+        &__location,
+        &__opening-hour {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        &__decoration {
+            width: 15rem;
+            height: auto;
+            padding: 0.5rem 0;
+            margin: 0 auto;
+        }
+
+        &__opening-hour {
+            align-self: center;
+        }
+
+        &__location {
+            align-items: center;
+            align-self: center;
+        }
+    }
+    // main about us
+    .main-about-us {
+    
+        &__wrapper {
+            padding: 0;
+            margin-left: 0;
+            @include flexAllCenter;
+            flex-direction: column;
+        }
+
+        &__img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 36rem;
+            max-height: 40rem;
+            object-fit: cover;
+        }
+
+        &__box {
+            padding: 0;
+            width: 95%;
+            max-width: 36rem;
+            height: auto;
+            transform: translate(0);
+            box-shadow: none;
+            background-color: transparent;
+            padding-bottom: 2rem;
+
+            &::before {
+                content:'';
+                display: none;
+            }
+    
+            &::after {
+                content:'';
+                display: none;
+            }
+        }
+
+        &__title {
+            font-size: 2.4rem;
+        }
+
+        &__para {
+            font-size: 1rem;
+        }
+    }
+    // swiper gallery
+    .swiper-about {
+        width: 30rem;
+        height: 27rem;
+        max-height: auto;
+    }
+    
+    div.swiper-button-next,
+    div.swiper-button-prev {
+    position: fixed;
+    top: 85%; 
+    width: 3.3rem;
+    height: 4rem;
+    }
+
+    div.swiper-button-next {
+        right: 30%;
+    }
+
+    div.swiper-button-prev {
+        left: 30%;
+    }
+
+    // main contact small
+    .main-contact {
+
+        &--flex {
+            flex-direction: column;
+            padding: 3rem 1rem;
+        }
+
+        &__info-wrapper {
+            gap: 2rem;
+            height: 30vh;
+        }
+
+        // phone icon awesome contact
+        &__info-card:nth-child(2) &__info-card--img{
+            right: -15px;
+        }
+
+        // mail icon awesome contact
+        &__info-card:nth-child(1) &__info-card--img {
+            right: -17px;
+        }
+
+        &__mapa {
+            width: 100%;
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+
+        &__mapouter2 {
+            height: 30vh;
+        }
+
+        // map location icon awesome contact
+        &__mapa:nth-child(2) &__info-card--img{
+            right: -15px;
+        }
+
+        &--flex-bottom {
+            flex-direction: column;
+            padding: 0rem 1rem 3rem 1rem; 
+        }
+
+        &__bigImg-container {
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+
+        &__form {
+            flex-grow: 1;  
+            flex-basis: auto;    
+        }
+    }
+}

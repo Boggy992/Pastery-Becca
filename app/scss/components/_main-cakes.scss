@@ -1,0 +1,98 @@
+.main-cakes {
+    background-color: color(primary-nav);
+    padding: 4rem 0;
+
+    &__h4 {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: color(primary-grey);
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 0.5rem auto;
+            width: 30px;
+            height: 3px;
+            background-color: color(primary-grey);
+        }
+    }
+
+    &__p {
+        max-width: 92%;
+        text-align: justify;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        color: color(primary-dark);
+    }
+
+    &__p:first-of-type {
+        padding: 1rem 0;
+        max-width: 92%;
+        text-align: justify;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        @include flexAllCenter;
+        flex-wrap: wrap;
+        gap: 2rem;
+        transition: flex-wrap 300ms ease-in-out;
+        padding-top: 1rem;
+    }
+
+    &__card {
+        position: relative;
+        background-color: color(rgba-black05);
+    }
+
+    &__img {
+        background-size: cover;
+        background-position: center, bottom 10%;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        width: 25rem;
+        height: 19rem;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        transition: all 300ms ease-in;
+
+        position: relative;
+
+        &::before {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 400;
+            font-size: 1.6rem;
+            content: '\f689';
+            color: color(primary-white);
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 300ms ease-in-out;
+        }
+    }
+
+    &__title {
+        color: color(primary-white);
+        position: absolute;
+        right: 0.2rem;
+        bottom: 0.2rem;
+        transition: all 300ms ease-in;
+    }
+
+    &__card:hover &__img {
+        // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        background-position: center, top 20%;
+        background-color: color(rgba-black05);
+    }
+
+    &__card:hover &__title {
+        opacity: 1;
+    }
+
+    &__card:hover &__img::before {
+        opacity: 1;
+    }
+
+}

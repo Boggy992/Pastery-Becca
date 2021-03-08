@@ -1,0 +1,30 @@
+body {
+    position: relative;
+}
+
+.social-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: color(fb-icon-blue);
+    position: fixed;
+    right: 0;
+    top: 15rem;
+    z-index: 3;
+    @include flexAllCenter;
+    transform: translateX(+100%);
+    transition: all 200ms ease;
+
+    &:hover {
+        width: 4rem;   
+    }
+
+    &__fb {
+        display: block;
+        width: 0.8rem;
+        height: auto;
+    }
+}
+
+.social-icon-observer {
+    transform: translateX(0);
+}

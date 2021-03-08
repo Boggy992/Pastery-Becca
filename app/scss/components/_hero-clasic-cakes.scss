@@ -1,0 +1,31 @@
+.hero-clasic-cakes {
+    background-image: url('../images/clasic-cakes-hero/klasicne-cover.jpg');
+    background-color: color(rgba-black05);
+    background-position: 50% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding: 6rem 0;
+
+    &__wrapper {
+        @include flexAllCenter;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 2rem;
+    }
+
+
+    &__h2 {
+        color: color(primary-white);
+        padding-left: 4rem;
+        font-family: Great Vibes, cursive;
+        text-transform: capitalize;
+    }
+
+    &__decoration {
+        width: 15rem;
+        height: auto;
+        margin-left: 5.2rem;
+        // margin-right: auto;
+    }
+}

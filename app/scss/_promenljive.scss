@@ -1,0 +1,114 @@
+$colors: (
+  'primary-white': #eff1f1,
+  'secondary-white': #ffffff,
+  'primary-nav': #faf3ee,
+  'primary-pink': #fe33ff,
+  'primary-dark': #191919,
+  'primary-brown': #b07d62,
+  'rgba-brown': rgba(176,125,98, 0.4),
+  'secondary-dark': #3a3a3a,
+  'primary-grey': #7c7c7c,
+  'secondary-grey': #4c4c4c,
+  'tertiary-grey': #E8E8E8,
+  'top-nav-red': 	#9a0e2e,
+  'secondary-red': #BE6579,
+  'fb-icon-blue': #1877f2,
+  'primary-orange': #996300,
+  'rgba-black05': rgba(0,0,0, 0.5),
+  'rgba-black01': rgba(0,0,0, 0.1),
+  'rgba-transp': rgba(0,0,0, 0),
+  'rgba-black03': rgba(0,0,0, 0.3),
+  'rgba-black08': rgba(0,0,0, 0.8),
+  'rgba-black10': rgba(0,0,0, 1),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return color(primary-dark);
+  } @else {
+    @return color(primary-white);
+  }
+}
+
+@mixin flexAllCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexColumnSpaceEvenly {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+  @mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transitionAll500Ease-in-out {
+    transition: all 500ms ease-in-out;  
+}
+
+@mixin width100-height100 {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin recommended-card-before {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: latoregular, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: color(secondary-dark);
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  width: 10rem;
+  height: 2rem;
+  background-color: color(primary-nav);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 600ms ease-in-out;
+  z-index: 2;  
+}
+
+@mixin recommended-card-after {
+  text-align: start;
+  text-transform: uppercase;
+  font-family: latoregular, sans-serif;
+  letter-spacing: 2px;
+  color: color(primary-white);
+  font-size: 0.8rem;
+  background-color: color(rgba-black05);
+  padding: 0.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: all 600ms ease-in-out;  
+}
+
+@mixin media-md {
+    @media only screen and (min-width: 768px) and (max-width: 1120px) {
+      @content;
+    }
+}
+  
+  @mixin media-small {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+}

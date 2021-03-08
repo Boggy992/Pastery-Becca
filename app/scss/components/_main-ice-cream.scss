@@ -1,0 +1,104 @@
+.main-ice-cream {
+    background-color: color(primary-nav);
+    padding: 4rem 0;
+
+    &__h4 {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: color(primary-grey);
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 0.5rem auto;
+            width: 30px;
+            height: 3px;
+            background-color: color(primary-grey);
+        }
+    }
+
+    &__p {
+        max-width: 95%;
+        text-align: justify;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        color: color(primary-dark);
+    }
+
+    &__p:first-of-type {
+        padding: 1rem 0;
+        max-width: 95%;
+        text-align: justify;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        @include flexAllCenter;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    &__img.lazy {
+        background-image: none !important;
+        background-color: #F1F1FA;
+        transform: translateY(+30%);
+        opacity: 0;
+        transition: all 300ms ease;
+    }
+
+    &__img {
+        background-color: transparent;
+        background-size: 15rem;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        transform: translateY(0);
+        opacity: 1;
+        width: 10rem;
+        height: 10rem;
+        cursor: pointer;
+        transition: 600ms all ease;
+
+        position: relative;
+
+        &::before {
+            content: attr(data-number);
+            color: color(primary-white);
+            background-color: color(rgba-black03);
+            font-family: latoregular, sans-serif;
+            padding: 0.2rem;
+            opacity: 0;
+            transition: opacity 500ms;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &::after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 400;
+            font-size: 1rem;
+            content: '\f065';
+            color: color(primary-white);
+            opacity: 0;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            // transform: translate(-50%, -50%);
+            transition: opacity 500ms ease-in-out;
+        }
+
+        &:hover {
+            background-size: 15.5rem;      
+        }
+
+        &:hover::before,
+        &:hover::after {
+            opacity: 1;       
+        }
+    }
+}

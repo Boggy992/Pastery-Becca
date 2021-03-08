@@ -1,0 +1,65 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+  
+img {
+    width: 100%;
+}
+
+h1,h3,h4,a,li,span {
+    font-family: "latoregular", sans-serif;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    letter-spacing: 0.5px;
+    font-size: 0.92rem;
+    color: color(primary-grey);
+    font-family: "latolight", sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;  
+    letter-spacing: 1.5px;  
+}
+
+h2 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-family: Great Vibes, cursive;
+    font-weight: normal;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 98%;
+    max-width: 1200px;
+}
+
+.overflowY-hidden {
+    overflow-y: hidden;
+}
+
+// resize transition stop  
+.resize-animation-stopper {
+    animation: none !important;
+    transition: none !important;
+  }

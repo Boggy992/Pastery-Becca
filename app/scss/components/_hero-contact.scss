@@ -1,0 +1,26 @@
+.hero-contact {
+    background-color: color(primary-brown);
+    padding: 5rem 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 18.5rem;
+        margin-left: 2rem;
+    }
+
+    &__h2 {
+        color: color(primary-dark);
+        font-family: Great Vibes, cursive;
+        padding-bottom: 0.5rem;
+        text-transform: inherit;
+    }
+
+    &__decoration {
+        width: 80%;
+        height: auto;
+        margin-left: 2rem;
+    }
+}

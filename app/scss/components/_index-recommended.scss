@@ -1,0 +1,125 @@
+.recommended {
+    background-color: color(primary-nav);
+    padding: 2rem 0;
+
+    &__h2 {
+        text-align: center;
+        padding: 3rem 0;
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 1rem auto;
+            border-radius: 0 1rem 1rem 0;
+            width: 18rem;
+            height: 3px;
+            background: rgb(0,0,0);
+            background: linear-gradient(266deg, rgba(0,0,0,1) 0%, rgba(154,14,46,1) 0%, rgba(239,241,241,1) 100%);  
+        }
+    } 
+
+    &__card-wrapper {
+        @include flexAllCenter;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    // first card title
+    &__card-box:nth-child(1) {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: 'Krempita';
+            @include recommended-card-before;
+        }
+
+        &::after {
+            content: 'Izlupati cvrsti snjeg od 6 bjelanjaka i 10 zlica secera,Izlupati cvrsti snjeg od 6 bjelanjaka i 10 zlica secera,';
+            @include recommended-card-after;
+        }
+    }
+
+    // second card title
+    &__card-box:nth-child(2) {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: 'Koktel baklava';
+            @include recommended-card-before;
+        }
+
+        &::after {
+            content: 'Izlupati cvrsti snjeg od 6 bjelanjaka i 10 zlica secera,Izlupati cvrsti snjeg od 6 bjelanjaka i 10 zlica secera,';
+            @include recommended-card-after;
+        }
+    }
+
+    &__card-box:nth-child(3) {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: 'Lulu';
+            @include recommended-card-before;
+        }
+
+        &::after {
+            content: 'Izlupati cvrsti snjeg od 6 bjelanjaka i 10 zlica secera,Izlupati cvrsti snjeg od 6 bjelanjaka i 10 zlica secera,';
+            @include recommended-card-after;
+        }
+    }
+
+    &__card-box:nth-child(4) {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: 'Tresnjica';
+            @include recommended-card-before;
+        }
+
+        &::after {
+            content: 'Izlupati cvrsti snjeg od 6 bjelanjaka i 10 zlica secera,Izlupati cvrsti snjeg od 6 bjelanjaka i 10 zlica secera,';
+            @include recommended-card-after;
+        }
+    }
+
+    &__card-box:hover::before {
+        transform: translateX(0%);
+    }
+
+    &__card-box:hover::after {
+        transform: translateX(0%);
+    }
+
+    &__card {
+        position: relative;
+
+        &::before {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 400;
+            font-size: 1.6rem;
+            content: '\f05a';
+            color: color(primary-grey);
+            opacity: 1;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            transition: opacity 200ms ease-in-out;
+        }
+    }
+
+    &__card-box:hover &__card::before {
+        opacity: 0.3;
+    }
+    
+    &__card-img {
+        display: block;
+        object-fit: cover;
+        width: 16rem;
+        height: 16rem;
+    }
+}
+

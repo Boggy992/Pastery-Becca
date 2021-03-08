@@ -1,0 +1,17 @@
+.hero-about-us {
+    background-color: color(primary-brown);
+    padding: 5rem 0;
+
+    &__h2 {
+        color: color(primary-dark);
+        padding-left: 4rem;
+        font-family: Great Vibes, cursive;
+        text-transform: capitalize;
+    }
+
+    &__decoration {
+        width: 12rem;
+        height: auto;
+        margin-left: 3.4rem;
+    }
+}

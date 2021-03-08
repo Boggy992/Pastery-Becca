@@ -1,0 +1,27 @@
+.map-sec {
+    background-color: color(primary-nav);
+    padding: 3rem 0;
+
+    &__h2 {
+        text-align: center;
+        padding: 2rem 0;
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 1rem auto;
+            border-radius: 0 1rem 1rem 0;
+            width: 25rem;
+            height: 3px;
+            background: rgb(0,0,0);
+            background: linear-gradient(266deg, rgba(0,0,0,1) 0%, rgba(154,14,46,1) 0%, rgba(239,241,241,1) 100%);  
+        }
+    }
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}

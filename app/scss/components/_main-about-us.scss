@@ -1,0 +1,70 @@
+.main-about-us {
+    background-color: color(primary-nav);
+
+    &__wrapper {
+        padding: 2rem 0;
+        margin-left: 2rem;
+        @include flexAllCenter;
+    }
+
+    &__img {
+        display: block;
+        width: 36rem;
+        height: 40rem;
+        padding: 2rem 0;
+        object-fit: cover;
+    }
+
+    &__box {
+        padding: 2rem;
+        width: 30rem;
+        height: 100%;
+        box-shadow: 2px 1px 9px 0px rgba(0,0,0,0.16);
+        background-color: color(secondary-white);
+        transform: translate(-20%, -20%);
+
+        position: relative;
+
+        &::before {
+            content:'';
+            display: block;
+            width: 100px;
+            height: 1px;
+            background-color: color(primary-brown);
+            position: absolute;
+            top: -20px;
+            right: -20px;
+        }
+
+        &::after {
+            content:'';
+            display: block;
+            width: 1px;
+            height: 100px;
+            background-color: color(primary-brown);
+            position: absolute;
+            top: -20px;
+            right: -20px;
+        }
+      
+    }
+
+    &__title {
+        color: color(secondary-grey);
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: Great Vibes, cursive;
+        text-transform: capitalize;
+    }
+
+    &__para {
+        padding: 0.5rem;
+        font-family: latoitalic;
+        color: color(primary-grey);
+        letter-spacing: 1px;
+    }
+}
+
+#message {
+    resize: none;
+}

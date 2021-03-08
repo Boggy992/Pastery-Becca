@@ -1,0 +1,31 @@
+.hero-wedding-cakes {
+    background-image: url('../images/wedding-cakes-main-images/wedding-cake14-cover.jpg');
+    background-color: color(rgba-black05);
+    background-position: 50% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding: 6rem 0;
+
+    &__wrapper {
+        @include flexAllCenter;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 2rem;
+    }
+
+
+    &__h2 {
+        color: color(primary-white);
+        padding-left: 3.5rem;
+        font-family: Great Vibes, cursive;
+        text-transform: capitalize;
+    }
+
+    &__decoration {
+        width: 12rem;
+        height: auto;
+        margin-left: 6.5rem;
+        // margin-right: auto;
+    }
+}

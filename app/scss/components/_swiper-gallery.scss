@@ -1,0 +1,165 @@
+.swiper-all {
+  visibility: hidden;
+  background-color: rgba(255,255,255,0.88);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 300ms all ease-in 0.3s;
+}
+  
+.swiper-about {
+  background: transparent;
+  width: 50rem;
+  height: 40rem;
+  max-width: 90%;
+  max-height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  
+.swiper-custom {
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  position: relative;
+}
+
+.loading-img {
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.ic-slider .swiper-slide {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    content: attr(data-number);
+    color: color(tertiary-grey);
+    background-color: color(primary-dark);
+    font-family: latoregular, sans-serif;
+    font-size: 2rem;
+    padding: 0.1rem 0.4rem;
+
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+  }
+}
+
+.lazy {
+  background-image: none !important;
+}
+
+.sw-close {
+  width: 2.3rem;
+  height: 2.3rem;
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  z-index: 10;
+  background-color: #000;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+  transition: 300ms opacity ease-in;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 75%;
+    height: 1px;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+    background-color: #fff;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 75%;
+    height: 1px;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    background-color: #fff;
+  }
+}
+  
+.swiper-img-number {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+  z-index: 999;
+  background-color: set-text-color(#272727);
+}
+  
+.swiper-img-number span:nth-child(2) {
+  &::before {
+    content: '/';
+    color: color(fifth);
+  }
+}
+
+.swiper-button-next::before {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 400;
+  font-size: 2rem;
+  content: '\f0da';
+  opacity: 0.8;
+}
+
+.swiper-button-prev::before {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 400;
+  font-size: 2rem;
+  content: '\f0d9';
+  opacity: 0.8;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+div.swiper-button-next,
+div.swiper-button-prev {
+  position: fixed; 
+  width: 3.3rem;
+  height: 10rem;
+  background-color: color(primary-dark);
+  border-radius: 5px;
+  opacity: 0.8;
+  transition: opacity 300ms ease-in;
+}
+
+div.swiper-button-next:hover,
+div.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.gallery-block {
+  visibility: visible;
+  opacity: 1;
+}
+
+.loading-hidden {
+  display: none;
+}
