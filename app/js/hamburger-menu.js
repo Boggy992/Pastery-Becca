@@ -36,12 +36,28 @@ bckgWrapper.addEventListener('click', ()=> {
 });
 
 // hamburger menu arrows
-headerArrow.forEach( (arrow,index) => {
-    arrow.addEventListener('click', (e)=> {
-        let triangleItem = e.target.parentElement;
-        let subMenuRevel = e.target.parentElement.parentElement.lastChild.previousElementSibling;
-        subMenuRevel.classList.toggle('header__sub-menu-visible');   
-        arrow.classList.toggle('header__background-arrow');
-        triangleItem.classList.toggle('header__item-triangle');
-    });      
-});
+// headerArrow.forEach( (arrow,index) => {
+//     arrow[0].addEventListener('click', (e)=> {
+//         let triangleItem = e.target.parentElement;
+//         let subMenuRevel = e.target.parentElement.parentElement.lastChild.previousElementSibling;
+//         subMenuRevel.classList.toggle('header__sub-menu-visible');   
+//         arrow.classList.toggle('header__background-arrow');
+//         triangleItem.classList.toggle('header__item-triangle');
+//     });      
+// });
+
+headerArrow[0].addEventListener('click', (e)=> {
+    let triangleItem = e.target.parentElement;
+    let subMenuRevel = e.target.parentElement.parentElement.lastChild.previousElementSibling;
+    subMenuRevel.classList.toggle('header__sub-menu-visible');   
+    headerArrow[0].classList.toggle('header__background-arrow');
+    triangleItem.classList.toggle('header__item-triangle');
+});  
+
+headerArrow[1].addEventListener('click', (e)=> {
+    let triangleItem = e.target.parentElement;
+    let subMenuRevel = e.target.parentElement.parentElement.lastChild.previousElementSibling;
+    subMenuRevel.classList.toggle('header__sub-menu-visible-cup-cakes');   
+    headerArrow[1].classList.toggle('header__background-arrow');
+    triangleItem.classList.toggle('header__item-triangle');
+});  

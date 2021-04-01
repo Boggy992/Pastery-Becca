@@ -1,0 +1,31 @@
+.hero-large-cup-cakes {
+    background-image: url('../images/large-cup-cakes-main-images/large-cup-cakes-img5-big.jpg');
+    background-color: color(rgba-brown);
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: hue;
+    padding: 6rem 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+    }
+
+    &__h2 {
+        color: color(primary-dark);
+        margin-left: 3rem;
+        font-family: Great Vibes, cursive;
+        text-transform: capitalize;
+    }
+
+    &__decoration {
+        width: 14rem;
+        height: auto;
+        margin-left: 6rem;
+    }
+}

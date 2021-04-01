@@ -19,8 +19,12 @@
     }
 
     &__p {
+        font-family: latoregular, sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
         max-width: 95%;
         text-align: justify;
+        line-height: 1.6;
         margin: 0 auto;
         padding-bottom: 1rem;
         color: color(primary-dark);

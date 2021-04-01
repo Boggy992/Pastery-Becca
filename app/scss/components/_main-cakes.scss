@@ -2,37 +2,6 @@
     background-color: color(primary-nav);
     padding: 4rem 0;
 
-    &__h4 {
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: color(primary-grey);
-
-        &::after {
-            content: '';
-            display: block;
-            margin: 0.5rem auto;
-            width: 30px;
-            height: 3px;
-            background-color: color(primary-grey);
-        }
-    }
-
-    &__p {
-        max-width: 92%;
-        text-align: justify;
-        margin: 0 auto;
-        padding-bottom: 1rem;
-        color: color(primary-dark);
-    }
-
-    &__p:first-of-type {
-        padding: 1rem 0;
-        max-width: 92%;
-        text-align: justify;
-        margin: 0 auto;
-    }
-
     &__wrapper {
         @include flexAllCenter;
         flex-wrap: wrap;
@@ -44,6 +13,7 @@
     &__card {
         position: relative;
         background-color: color(rgba-black05);
+        box-shadow: 0 1px 5px color(rgba-black03);
     }
 
     &__img {
@@ -53,7 +23,7 @@
         background-blend-mode: multiply;
         width: 25rem;
         height: 19rem;
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
         transition: all 300ms ease-in;
 
         position: relative;
@@ -74,6 +44,7 @@
     }
 
     &__title {
+        font-size: 1.35rem;
         color: color(primary-white);
         position: absolute;
         right: 0.2rem;

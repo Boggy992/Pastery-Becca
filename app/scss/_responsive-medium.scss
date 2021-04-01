@@ -110,7 +110,24 @@
             visibility: hidden;
             overflow: hidden;
             opacity: 1;
-            transform: translateY(+13%);
+            transform: translateY(+9.9%);
+            transition: all .25s ease;
+            box-shadow: none;     
+            background-color: color(secondary-grey); 
+        }
+
+        &__sub-menu-dropdown2 {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0;
+            padding: 0;
+            z-index: 500;
+            visibility: hidden;
+            overflow: hidden;
+            opacity: 1;
+            transform: translateY(+12.6%);
             transition: all .25s ease;
             box-shadow: none;     
             background-color: color(secondary-grey); 
@@ -118,13 +135,24 @@
 
         &__sub-menu-visible {
             visibility: visible;
-            height: 187px;
+            height: 250px;
+        }
+
+        &__sub-menu-visible-cup-cakes {
+            visibility: visible;
+            height: 188px;
         }
 
         &__item:hover &__sub-menu-dropdown {
             visibility: visible;
             opacity: 1;
-            transform: translateY(+13%);
+            transform: translateY(+9.9%);
+        }
+
+        &__item:hover &__sub-menu-dropdown2 {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(+12.6%);
         }
 
         &__item:hover &--arrow {

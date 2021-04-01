@@ -69,7 +69,8 @@
         transform: rotate(180deg);
     }
 
-    &__sub-menu-dropdown {
+    &__sub-menu-dropdown,
+    &__sub-menu-dropdown2 {
         position: absolute;
         left: 0;
         top: 2rem;
@@ -101,6 +102,12 @@
     }
 
     &__item:hover &__sub-menu-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    &__item:hover &__sub-menu-dropdown2 {
         visibility: visible;
         opacity: 1;
         transform: translateY(0%);
