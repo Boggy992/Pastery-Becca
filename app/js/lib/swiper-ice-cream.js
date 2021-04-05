@@ -25,12 +25,16 @@ if(document.querySelector('.swiper-all') !== null){
 
   allSmallImgs.forEach((img, index) => {
     img.addEventListener('click', (e) => {
-      // return top button z-index 0
+      // return top button z-index 
       document.querySelector('.btn-bck-top').style.zIndex = 0;
-      // social icon z-index 0
+      // social icon z-index 
       document.querySelector('.social-icon').style.zIndex = 0;
-      // navbar z-index 0
+      // navbar z-index 
       document.querySelector('.header').style.zIndex = -5;
+      // ice-cream-obtaining z-index
+      if(document.querySelector('.l-container') !== null) {
+        document.querySelector('.l-container').style.zIndex = 0;
+      }
       document.querySelectorAll('.swiper-img-number')[0].children[0].innerHTML = index + 1;
       document.querySelectorAll('.swiper-img-number')[0].children[1].innerHTML = allSmallImgs.length;
       mYswiper.slideTo(index , 500, false);

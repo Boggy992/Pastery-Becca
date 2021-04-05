@@ -1,12 +1,13 @@
 .main-ice-cream {
     background-color: color(primary-nav);
-    padding: 4rem 0;
+    padding: 0 0 4rem 0;
 
     &__h4 {
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 2px;
         color: color(primary-grey);
+        padding: 2rem 0 1rem 0;
 
         &::after {
             content: '';
