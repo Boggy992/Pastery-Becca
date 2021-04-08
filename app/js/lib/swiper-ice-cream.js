@@ -32,8 +32,8 @@ if(document.querySelector('.swiper-all') !== null){
       // navbar z-index 
       document.querySelector('.header').style.zIndex = -5;
       // ice-cream-obtaining z-index
-      if(document.querySelector('.l-container') !== null) {
-        document.querySelector('.l-container').style.zIndex = 0;
+      if(document.querySelector('.ice-cream-obtaining__container') !== null) {
+        document.querySelector('.ice-cream-obtaining__container').style.zIndex = 0;
       }
       document.querySelectorAll('.swiper-img-number')[0].children[0].innerHTML = index + 1;
       document.querySelectorAll('.swiper-img-number')[0].children[1].innerHTML = allSmallImgs.length;

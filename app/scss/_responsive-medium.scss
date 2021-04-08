@@ -322,6 +322,19 @@
             object-fit: cover;
         }
     }
+    // ice cream main obtaining cards
+    .ice-cream-obtaining {
+        background-color: color(primary-nav); 
+    
+        &__wrapper {
+          min-height: 25vh;
+        }
+    
+        &__container {
+          grid-gap: 18px;
+          padding: 18px;
+        }
+    }
 
     .main-contact {
 
